@@ -2,7 +2,7 @@ Installation:
 
 - Move the *.ps1 script and *.ico file into C:\Program Files\BrowserChoice\ (or folder of your choice)
 - Double-Click the *.reg file to register the script in the system (edit the *.reg file to accomondate the folder of your choice)
-- Optionally put the *.ini file into the same folder to add browsers or programs that haven't been registered to the system (e.g. for portable browser or programs)
+- Optionally put the *.ini file into the same folder and edit it with additional browsers or programs that haven't been registered to the system (e.g. for portable browser or programs)
 - Go to Default Apps in the Settings and select "Windows Powershell"
 
 Preview Images:
