@@ -1,0 +1,101 @@
+Windows Registry Editor Version 5.00
+
+; Replace "C:\\Program Files\\" with the path where you put the script in
+; Two backslashes \\ are needed between each folder
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice]
+@="BrowserChoice"
+"FriendlyTypeName"="Browser Choice"
+"EditFlags"=dword:00000002
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\DefaultIcon]
+@="C:\\Program Files\\BrowserChoice\\BrowserChoice.ico"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell]
+@="open"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell\open\command]
+@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\" \"%1\""
+"Orig"="pwsh -WindowStyle Hidden -File \"C:\\Program Files\\BrowserChoice\\BrowserChoice.ps1\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell\open\ddeexec]
+@=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\http]
+@="URL:http"
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\http\DefaultIcon]
+@="C:\\Program Files\\BrowserChoice\\BrowserChoice.ico"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell]
+@="open"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell\open\command]
+@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell\open\ddeexec]
+@=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\https]
+@="URL:https"
+"URL Protocol"=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\https\DefaultIcon]
+@="C:\\Program Files\\BrowserChoice\\BrowserChoice.ico"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell]
+@="open"
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell\open\command]
+@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\" \"%1\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell\open\ddeexec]
+@=""
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice]
+@="Browser Choice"
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\Capabilities]
+"ApplicationDescription"="Browser Choice lets you choose the Browser on an indivitual base."
+"ApplicationIcon"="C:\\Program Files\\BrowserChoice\\BrowserChoice.ico"
+"ApplicationName"="Browser Choice"
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\Capabilities\FileAssociations]
+".htm"="BrowserChoice"
+".html"="BrowserChoice"
+".shtml"="BrowserChoice"
+".xht"="BrowserChoice"
+".xhtml"="BrowserChoice"
+".svg"="BrowserChoice"
+".webp"="BrowserChoice"
+".avif"="BrowserChoice"
+".pdf"="BrowserChoice"
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\Capabilities\StartMenu]
+"StartMenuInternet"="BrowserChoice"
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\Capabilities\URLAssociations]
+"http"="BrowserChoice"
+"https"="BrowserChoice"
+"mailto"="BrowserChoice"
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\DefaultIcon]
+@="C:\\Program Files\\BrowserChoice\\BrowserChoice.ico"
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\shell\open\command]
+@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\""
+
+[HKEY_CURRENT_USER\SOFTWARE\RegisteredApplications]
+"BrowserChoice"="Software\\Clients\\StartMenuInternet\\BrowserChoice\\Capabilities"
