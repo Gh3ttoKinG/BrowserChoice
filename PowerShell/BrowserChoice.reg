@@ -18,8 +18,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell\open]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell\open\command]
-@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\" \"%1\""
-"Orig"="pwsh -WindowStyle Hidden -File \"C:\\Program Files\\BrowserChoice\\BrowserChoice.ps1\" \"%1\""
+@="pwsh -WindowStyle Hidden -File \"C:\\Program Files\\BrowserChoice\\BrowserChoice.ps1\" \"%1\""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\BrowserChoice\shell\open\ddeexec]
 @=""
@@ -37,7 +36,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell\open]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell\open\command]
-@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\" \"%1\""
+@="pwsh -WindowStyle Hidden -File \"C:\\Program Files\\BrowserChoice\\BrowserChoice.ps1\" \"%1\""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\http\shell\open\ddeexec]
 @=""
@@ -55,7 +54,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell\open]
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell\open\command]
-@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\" \"%1\""
+@="pwsh -WindowStyle Hidden -File \"C:\\Program Files\\BrowserChoice\\BrowserChoice.ps1\" \"%1\""
 
 [HKEY_CURRENT_USER\SOFTWARE\Classes\https\shell\open\ddeexec]
 @=""
@@ -95,7 +94,7 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\shell\open]
 
 [HKEY_CURRENT_USER\SOFTWARE\Clients\StartMenuInternet\BrowserChoice\shell\open\command]
-@="\"C:\\Program Files\\BrowserChoice\\BrowserChoice.exe\""
+@="pwsh -WindowStyle Hidden -File \"C:\\Program Files\\BrowserChoice\\BrowserChoice.ps1\" \"%1\""
 
 [HKEY_CURRENT_USER\SOFTWARE\RegisteredApplications]
 "BrowserChoice"="Software\\Clients\\StartMenuInternet\\BrowserChoice\\Capabilities"
