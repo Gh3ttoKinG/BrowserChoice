@@ -1,12 +1,7 @@
 <#
-	Learned how to easily create a XAML GUI for powershell through_
-	https://foxdeploy.wordpress.com/2015/04/16/part-ii-deploying-powershell-guis-in-minutes-using-visual-studio/
-#>
-
-<#
 param(
-		[Parameter(Mandatory=$False, Position=0, ValueFromPipeline=$false)]
-		[String]$URL
+	[Parameter(Mandatory=$False, Position=0, ValueFromPipeline=$false)]
+	[String]$URL
 )
 #>
 
@@ -93,21 +88,25 @@ $Programs = @();
 $WPF.Website.Text = $args;
 #$WPF.Website.Text = $URL;
 
-try {
-  $ProgramList = Get-Content ($PSScriptRoot + '\BrowserChoice.ini');
-  $ProgramList = $ProgramList.Split([Environment]::NewLine);
-  foreach ($Program in $ProgramList) {
-	$ProgramSplit = $Program.Split(';');
-	$Programs += [PSCustomObject] @{
-	  Name = $ProgramSplit[0];
-	  Path = $ProgramSplit[1];
-	  Parameters = $ProgramSplit[2];
-	}
-  }
-} catch {
-	Write-Host "The file could not be read:";
-	Write-Host $Error[0];
+If (Test-Path ($PSScriptRoot + '\BrowserChoice.ini')) {
+    try {
+      $ProgramList = Get-Content ($PSScriptRoot + '\BrowserChoice.ini');
+      $ProgramList = $ProgramList.Split([Environment]::NewLine);
+      foreach ($Program in $ProgramList) {
+        $ProgramSplit = $Program.Split(';');
+        $Programs += [PSCustomObject] @{
+          Name = $ProgramSplit[0];
+          Path = $ProgramSplit[1];
+          Parameters = $ProgramSplit[2];
+        }
+      }
+    } catch {
+        Write-Host "The file could not be read:";
+        Write-Host $Error[0];
+    }
+    Write-Host "No *.ini file found, not adding custom programs.";
 }
+
 $Browsers = Get-ChildItem 'Registry::HKLM\SOFTWARE\Clients\StartMenuInternet\';
 foreach ($Browser in $Browsers) {
 	$ProgramName = ($Browser | Get-ItemProperty).'(default)'
