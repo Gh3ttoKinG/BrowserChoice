@@ -5,5 +5,5 @@
 *.user
 /.vs
 /Redirector/.vs
-/Redirector/Browser Choice Redirect/bin
-/Redirector/Browser Choice Redirect/obj
+/Redirector/bin
+/Redirector/obj
